@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { TokenService } from '../../shared/services/token.service';
@@ -13,11 +13,11 @@ export class MeetingPreviewComponent implements OnInit, OnDestroy {
   showSettings = false;
   joinLoading = false;
   newLoading = false;
-  connectionInfoForm?: FormGroup;
+  connectionInfoForm?: UntypedFormGroup;
   subscriptions: Subscription[] = [];
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private router: Router,
     private tokeService: TokenService
   ) { }
